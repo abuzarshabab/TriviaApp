@@ -2,15 +2,25 @@ const express = require("express");
 const ejs = require("ejs");
 const path = require("path");
 const route = require('./routes/route')
+const mongoose = require("mongoose");
 
 const server = express();
-const PORT = process.env.PORT || 3000 ;
+const PORT = process.env.PORT || 3000;
 
-server.set("vies engine", "ejs");
+main().catch((err) => {
+  console.log("err");
+});
+
+async function main() {
+  console.log("Before Db connection");
+  await mongoose.connect("mongodb://127.0.0.1:27017/trivia");
+  console.log("Database is connected");
+}
+
+server.set("view engine", "ejs");
 
 // Creating virtual Css path as vCss
-server.use("/vCss", express.static(path.join(__dirname + "asset/css/style.css"))
-);
+server.use("/vCss", express.static(path.resolve(__dirname, "assets/css/")));
 
 // Set routing to the route.js
 server.use('/', route);
