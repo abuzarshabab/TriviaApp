@@ -1,7 +1,6 @@
 // Get Methods
 // Handling Home Route
 
-const { db } = require("../model/model");
 const model = require("../model/model");
 
 let set = {};
@@ -27,7 +26,17 @@ exports.summaryRoute = (req, res) => {
 
 // Handling History Route
 exports.historyRoute = (req, res) => {
-  res.render("history", { history });
+  let ansSet = model.find({});
+  ansSet.exec((err, data) => {
+    if (err) {
+      console.log("Fetching data error" + err);
+    } else {
+      console.log(data);
+      res.render("history", { data });
+    }
+  });
+
+  res.render("history");
 };
 
 //  POST method
