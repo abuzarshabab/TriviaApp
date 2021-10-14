@@ -10,21 +10,24 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>    
   </head>
   <body>
+    <% data.forEach(set=>{ %>
+
+  
     <div class="container text-center pt-5">
       <p>
-        Game Date : date and time
+        Game Date : <%= set.date %>
       </p>
 
-      <p> Name : Rahul Sing</h4>
+      <p> Name : <%= set.name %></h4>
       <p>
         Who is the best cricketer ? <br>
-        Virat
+        <%= set.answer1 %>
       </p>
       <p>
        What are the colours in the national flag?<br>
-        "white",
+        <%= set.answer3 %>
       </p>
-
     </div>
+    <% }) %>
   </body>
 </html>

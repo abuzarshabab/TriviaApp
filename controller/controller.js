@@ -35,8 +35,6 @@ exports.historyRoute = (req, res) => {
       res.render("history", { data });
     }
   });
-
-  res.render("history");
 };
 
 //  POST method
