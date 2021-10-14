@@ -11,23 +11,27 @@
   </head>
   <body class="text-center">
    
-    <form style="list-style: none;" class="form-signin p-4" action="/summary" method="get" >
+    <form style="list-style: none;" class="form-signin p-4" action="/summary" method="POST" >
       <h3 class="h3 mb-3 font-weight-normal">What are the colors in the Indian national flag? </h1>
       <li>
-        <input name="white" class="form-check-input" type="checkbox" value="white" id="White">
-        <label class="form-check-label" for="white">  White </label>
+        <label class="form-check-label" > 
+          <input name="checkBox" class="form-check-input" type="checkbox" value="white"> White    
+        </label>
       </li>
       <li>
-        <input class="form-check-input" type="checkbox" name="yellow" id="yellow">
-        <label class="form-check-label" for="yellow"> Yellow </label>
+        <label class="form-check-label" > 
+            <input name="checkBox" class="form-check-input" type="checkbox" value="yellow"  > Yellow 
+        </label>
       </li>
       <li>
-        <input name="orange" class="form-check-input" type="checkbox" id="orange">
-        <label class="form-check-label" for="orange">Orange</label>
+        <label class="form-check-label">
+          <input name="checkBox" class="form-check-input" type="checkbox" value="orange"> Orange  
+        </label>
       </li>
       <li>
-        <input name="green" class="form-check-input" type="checkbox" id="green">
-        <label class="form-check-label" for="green">Green</label>
+        <label class="form-check-label" >
+          <input name="checkBox" class="form-check-input" type="checkbox" value="green">  Green 
+        </label>
       </li>
       <button class="btn btn-primary  mt-4 pb-2 px-5" type="submit">Next</button>
       
