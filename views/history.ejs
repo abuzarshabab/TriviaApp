@@ -15,7 +15,20 @@
   
     <div class="container text-center pt-5">
       <p>
-        Game Date : <%= set.date %>
+        <% 
+          let option = {month: 'long'};
+          let dateString = set.date;
+          let date = dateString.getDate();
+          let month = new Intl.DateTimeFormat('en-US', option).format(dateString);
+         
+          let hours = dateString.getHours();         
+          let minutes = dateString.getMinutes();
+
+          hours =  12  || (hours % 12) ;
+          let AmPm = hours >= 12 ? 'pm' : 'am';
+          
+        %>
+        Game Date : <%= date %> <%= month %> <%= hours %> : <%= minutes %> <%= AmPm %>
       </p>
 
       <p> Name : <%= set.name %></h4>
@@ -25,7 +38,7 @@
       </p>
       <p>
        What are the colours in the national flag?<br>
-        <%= set.answer3 %>
+        <%= set.answer2 %>
       </p>
     </div>
     <% }) %>

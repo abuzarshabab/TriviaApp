@@ -31,13 +31,13 @@ exports.historyRoute = (req, res) => {
     if (err) {
       console.log("Fetching data error" + err);
     } else {
-      console.log(data);
+  
       res.render("history", { data });
     }
   });
 };
 
-//  POST method
+//  POST method 
 
 exports.addPage2Route = async (req, res) => {
   const answer2 = req.body.checkBox;
