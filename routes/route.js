@@ -2,7 +2,6 @@ const express = require('express');
 const route = express.Router();
 const {
   homeRoute,
-  summaryRoute,
   historyRoute,
   page1Route,
   page2Route,
@@ -16,7 +15,7 @@ route.get("/home", homeRoute);
 route.get("/", homeRoute);
 
 // Handling the Question
-route.get("/question1", page1Route);
+route.get("/question1",   );
 
 // Handling the Question
 route.get("/question2", page2Route);
