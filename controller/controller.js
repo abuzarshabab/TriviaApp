@@ -70,3 +70,4 @@ exports.addPage1Route = (req, res) => {
   console.log("Answer : " + set.answer1);
   res.redirect("/question2");
 };
+// End of controller file
