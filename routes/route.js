@@ -24,6 +24,7 @@ route.get("/question2", page2Route);
 route.get("/history", historyRoute);
 
 // API
+//Unlock the page
 route.post("/addName", addNameRoute);
 
 route.post("/addQuestion1", addPage1Route);
@@ -32,4 +33,4 @@ route.post("/summary", addPage2Route);
 
 
 
-module.exports = route;
+module.exports = route;// This should also be conflicted
