@@ -42,10 +42,11 @@ exports.historyRoute = (req, res) => {
 exports.addPage2Route = async (req, res) => {
   const answer2 = req.body.checkBox;
   set.answer2 = answer2;
-
+  
   console.log("Answer : " + set.answer2);
 
-  let setSend = new model(set);
+  let setSend = new model(set); 
+
   const result = await setSend.save();
 
   console.log(result);
